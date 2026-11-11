@@ -1,3 +1,40 @@
+@view-transition{
+    navigation: auto;
+}
+
+::view-transition-old(root){
+    animation: site-page-out 160ms ease-in both;
+}
+
+::view-transition-new(root){
+    animation: site-page-in 240ms ease-out both;
+}
+
+@keyframes site-page-out{
+    to{
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+}
+
+@keyframes site-page-in{
+    from{
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce){
+    ::view-transition-old(root),
+    ::view-transition-new(root){
+        animation: none;
+    }
+}
+
 body{
     margin: 0;
     min-height: 100vh;
@@ -289,11 +326,116 @@ header{
     position: fixed;
     z-index: 2;
     right: clamp(20px, 4vw, 56px);
-    bottom: 24px;
+    bottom: 72px;
     left: clamp(20px, 4vw, 56px);
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 18px;
+}
+
+.site-footer{
+    position: fixed;
+    z-index: 3;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(150px, 0.8fr) minmax(0, 1fr);
+    align-items: center;
+    box-sizing: border-box;
+    min-height: 48px;
+    padding: 5px clamp(16px, 4vw, 56px);
+    color: #d7b17b;
+    border-top: 1px solid #9c5b25;
+    background: linear-gradient(90deg, rgba(10, 5, 3, 0.97), rgba(22, 11, 6, 0.94) 50%, rgba(10, 5, 3, 0.97));
+    box-shadow: 0 -3px 14px rgba(0, 0, 0, 0.65);
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.site-footer__copyright{
+    margin: 0;
+    font-size: clamp(10px, 1vw, 13px);
+    white-space: nowrap;
+}
+
+.site-footer__copyright span{
+    padding: 0 3px;
+    color: #a8733c;
+}
+
+.site-footer__ornament{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #d08b41;
+}
+
+.site-footer__ornament span{
+    height: 1px;
+    flex: 1;
+    background: linear-gradient(90deg, transparent, #b97835);
+}
+
+.site-footer__ornament span:last-child{
+    transform: scaleX(-1);
+}
+
+.site-footer__ornament svg{
+    width: 38px;
+    height: 38px;
+    flex: 0 0 auto;
+    margin: 0 4px;
+    fill: rgba(17, 8, 4, 0.95);
+    stroke: currentColor;
+    stroke-width: 2;
+    filter: drop-shadow(0 0 4px rgba(207, 123, 48, 0.5));
+}
+
+.site-footer__social{
+    display: flex;
+    align-items: center;
+    justify-self: end;
+    gap: 10px;
+}
+
+.site-footer__social-label{
+    font-size: clamp(10px, 1vw, 13px);
+    white-space: nowrap;
+}
+
+.site-footer__links{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.site-footer__links a{
+    display: grid;
+    width: 25px;
+    height: 25px;
+    place-items: center;
+    color: #e6a759;
+    border: 1px solid #ad6d30;
+    border-radius: 50%;
+    background: rgba(10, 5, 3, 0.7);
+    transition: color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.site-footer__links a:hover{
+    color: #ffe0aa;
+    box-shadow: 0 0 9px rgba(225, 146, 59, 0.5);
+    transform: translateY(-2px);
+}
+
+.site-footer__links svg{
+    width: 14px;
+    height: 14px;
+    fill: currentColor;
+}
+
+.site-footer__links a:focus-visible{
+    outline: 2px solid #f0b565;
+    outline-offset: 3px;
 }
 
 .feature-card{
@@ -517,16 +659,12 @@ header{
 
     .main-nav{
         grid-area: nav;
-        justify-content: flex-start;
+        flex-wrap: wrap;
+        justify-content: center;
         justify-self: stretch;
         min-width: 0;
+        overflow: visible;
         gap: 2px;
-        overflow-x: auto;
-        scrollbar-width: none;
-    }
-
-    .main-nav::-webkit-scrollbar{
-        display: none;
     }
 
     .main-nav__link{
@@ -556,7 +694,7 @@ header{
     }
 
     .vic{
-        width: min(75vw, 420px);
+        width: min(100vw, 520px);
     }
 
     .Victoria{
@@ -625,6 +763,41 @@ header{
         margin: 32px 16px 24px;
     }
 
+    .site-footer{
+        position: relative;
+        right: auto;
+        bottom: auto;
+        left: auto;
+        grid-template-columns: minmax(0, 1fr);
+        justify-items: center;
+        gap: 8px;
+        min-height: 46px;
+        padding: 12px 10px;
+        text-align: center;
+    }
+
+    .site-footer__copyright{
+        white-space: normal;
+    }
+
+    .site-footer__ornament{
+        display: none;
+    }
+
+    .site-footer__social{
+        justify-self: center;
+        gap: 6px;
+    }
+
+    .site-footer__links{
+        gap: 4px;
+    }
+
+    .site-footer__links a{
+        width: 23px;
+        height: 23px;
+    }
+
     .feature-card{
         min-height: 142px;
     }
@@ -645,6 +818,7 @@ header{
         position: static;
         margin-top: 8px;
     }
+
 }
 
 @media (max-width: 360px){
