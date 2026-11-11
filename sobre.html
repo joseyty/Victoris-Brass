@@ -64,57 +64,66 @@
 
     <main class="about-main" aria-labelledby="about-title">
         <div class="about-layout">
-            <figure class="about-portrait">
-                <img src="img/Victoria-cross.png" alt="Victoria Brass, inventora steampunk de cabelos vermelhos e cartola com engrenagens">
-                <figcaption>Victoria Brass <span>A dama das engrenagens</span></figcaption>
+            <figure class="about-portrait" id="character-panel" role="tabpanel" aria-labelledby="character-tab-victoria" tabindex="0">
+                <img data-character-image src="img/Victoria-cross.png" alt="Victoria Brass, inventora steampunk de cabelos vermelhos e cartola com engrenagens">
+                <div class="about-portrait__placeholder" data-character-placeholder hidden aria-hidden="true"><span>VB</span></div>
+                <figcaption><strong data-character-name>Victoria Brass</strong><span data-character-role>A dama das engrenagens</span></figcaption>
             </figure>
 
-            <section class="about-story" aria-labelledby="about-title">
+            <section class="about-story" aria-labelledby="about-title" aria-live="polite">
                 <div class="about-heading__ornament" aria-hidden="true">
                     <span></span>
                     <svg viewBox="0 0 64 64"><path d="m27 6 3-3h4l3 3 5 1 4-1 3 3-1 4 3 4 4 1 1 4-2 4 1 5 3 3-1 4-4 2-2 5 1 4-3 3-4-1-5 3-1 4-4 1-3-3h-5l-3 3-4-1-1-4-5-3-4 1-3-3 1-4-3-4-4-2-1-4 3-3v-5l-3-4 1-4 4-1 3-4-1-4 3-3 4 1 5-2Z"/><circle cx="32" cy="32" r="13"/><circle cx="32" cy="32" r="5"/></svg>
                     <span></span>
                 </div>
                 <h1 id="about-title">Victoria Brass</h1>
-                <p class="about-subtitle">A dama das engrenagens</p>
+                <p class="about-subtitle" data-character-role>A dama das engrenagens</p>
                 <div class="about-story__panel">
-                    <p>Victoria Brass é uma mulher à frente de seu tempo. Inventora, sonhadora e aventureira, ela percorre uma cidade movida por vapor, descobrindo os segredos da tecnologia, desafiando o destino e inspirando aqueles ao seu redor.</p>
-                    <p>Entre relógios, máquinas e melodias, Victoria mostra que, mesmo em um mundo de engrenagens, o coração ainda pode sonhar.</p>
-                    <blockquote>“O futuro pertence àqueles que ousam sonhar.”<cite>— Victoria Brass</cite></blockquote>
+                    <p data-character-bio>Inventora, sonhadora e aventureira, Victoria percorre uma cidade movida a vapor em busca de novas descobertas e de seu próprio caminho.</p>
+                    <p data-character-detail>Entre relógios, máquinas e melodias, ela prova que até em um mundo de engrenagens há espaço para sonhar.</p>
+                    <blockquote><span data-character-quote>“O futuro pertence àqueles que ousam sonhar.”</span><cite data-character-cite>— Victoria Brass</cite></blockquote>
                 </div>
             </section>
 
-            <aside class="about-cast" aria-label="Personagens do universo Victoria Brass">
-                <article class="about-character">
+            <aside class="about-cast-panel" aria-label="Seleção de personagens">
+                <h2 class="about-cast__heading">Conheça os personagens</h2>
+                <div class="about-cast" role="tablist" aria-label="Personagens do universo Victoria Brass">
+                <button class="about-character is-selected" id="character-tab-victoria" type="button" role="tab" aria-selected="true" aria-controls="character-panel" tabindex="0" data-character="victoria">
+                    <span class="about-character__initial" aria-hidden="true">V</span>
+                    <span class="about-character__name">Victoria Brass</span>
+                    <span class="about-character__role">A dama das engrenagens</span>
+                </button>
+                <button class="about-character" id="character-tab-helena" type="button" role="tab" aria-selected="false" aria-controls="character-panel" tabindex="-1" data-character="helena">
                     <span class="about-character__initial" aria-hidden="true">H</span>
-                    <h2>Lady Helena</h2>
-                    <p>A nobre misteriosa</p>
-                </article>
-                <article class="about-character">
+                    <span class="about-character__name">Lady Helena</span>
+                    <span class="about-character__role">A nobre misteriosa</span>
+                </button>
+                <button class="about-character" id="character-tab-maxwell" type="button" role="tab" aria-selected="false" aria-controls="character-panel" tabindex="-1" data-character="maxwell">
                     <span class="about-character__initial" aria-hidden="true">M</span>
-                    <h2>Dr. Maxwell</h2>
-                    <p>O cientista visionário</p>
-                </article>
-                <article class="about-character">
+                    <span class="about-character__name">Dr. Maxwell</span>
+                    <span class="about-character__role">O cientista visionário</span>
+                </button>
+                <button class="about-character" id="character-tab-eloise" type="button" role="tab" aria-selected="false" aria-controls="character-panel" tabindex="-1" data-character="eloise">
                     <span class="about-character__initial" aria-hidden="true">E</span>
-                    <h2>Eloise</h2>
-                    <p>A aprendiz curiosa</p>
-                </article>
-                <article class="about-character">
+                    <span class="about-character__name">Eloise</span>
+                    <span class="about-character__role">A aprendiz curiosa</span>
+                </button>
+                <button class="about-character" id="character-tab-gregor" type="button" role="tab" aria-selected="false" aria-controls="character-panel" tabindex="-1" data-character="gregor">
                     <span class="about-character__initial" aria-hidden="true">G</span>
-                    <h2>Gregor Black</h2>
-                    <p>O caçador de segredos</p>
-                </article>
-                <article class="about-character">
+                    <span class="about-character__name">Gregor Black</span>
+                    <span class="about-character__role">O caçador de segredos</span>
+                </button>
+                <button class="about-character" id="character-tab-mila" type="button" role="tab" aria-selected="false" aria-controls="character-panel" tabindex="-1" data-character="mila">
                     <span class="about-character__initial" aria-hidden="true">M</span>
-                    <h2>Mila</h2>
-                    <p>A IA companheira</p>
-                </article>
-                <article class="about-character">
+                    <span class="about-character__name">Mila</span>
+                    <span class="about-character__role">A IA companheira</span>
+                </button>
+                <button class="about-character" id="character-tab-nora" type="button" role="tab" aria-selected="false" aria-controls="character-panel" tabindex="-1" data-character="nora">
                     <span class="about-character__initial" aria-hidden="true">N</span>
-                    <h2>Nora</h2>
-                    <p>A observadora</p>
-                </article>
+                    <span class="about-character__name">Nora</span>
+                    <span class="about-character__role">A observadora</span>
+                </button>
+                </div>
             </aside>
         </div>
         <p class="about-closing">“Uma cidade. Inúmeras histórias. Um só destino.”</p>
@@ -136,5 +145,6 @@
             </nav>
         </div>
     </footer>
+    <script src="sobre.js" defer></script>
 </body>
 </html>
