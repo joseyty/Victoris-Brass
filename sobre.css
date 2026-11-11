@@ -395,21 +395,40 @@ body.about-page{
     }
 
     .about-cast{
-        grid-column: auto;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 12px;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    .about-cast-panel{
+        grid-row: 1;
+    }
+
+    .about-portrait{
+        grid-row: 2;
+    }
+
+    .about-story{
+        grid-row: 3;
     }
 
     .about-character{
-        min-height: 138px;
+        min-height: 108px;
+        padding: 10px 4px 8px;
+    }
+
+    .about-character__initial{
+        width: 32px;
+        height: 32px;
+        margin-bottom: 6px;
+        font-size: 18px;
     }
 
     .about-character__name{
-        font-size: 16px;
+        font-size: 12px;
     }
 
     .about-character__role{
-        font-size: 13px;
+        font-size: 10px;
     }
 
     .about-closing{
