@@ -8,7 +8,7 @@ if (!(contactForm instanceof HTMLFormElement) || !(contactStatus instanceof HTML
     throw new Error("O formulário de contato não foi encontrado.");
 }
 
-contactForm.addEventListener("submit", (event) => {
+contactForm.addEventListener("submit", async (event) => {
     event.preventDefault();
 
     const formData = new FormData(contactForm);
@@ -21,15 +21,21 @@ contactForm.addEventListener("submit", (event) => {
         return;
     }
 
-    const subject = `Contato pelo site Victoria Brass - ${name}`;
+    const subject = "Contato pelo site Victoria Brass";
     const body = `Nome: ${name}\nE-mail: ${email}\n\nMensagem:\n${message}`;
     const gmailComposeUrl = new URL("https://mail.google.com/mail/");
     gmailComposeUrl.searchParams.set("view", "cm");
     gmailComposeUrl.searchParams.set("fs", "1");
     gmailComposeUrl.searchParams.set("to", contactAddress);
     gmailComposeUrl.searchParams.set("su", subject);
-    gmailComposeUrl.searchParams.set("body", body);
 
-    contactStatus.textContent = "Abrindo o Gmail para você revisar e enviar a mensagem.";
+    try {
+        await navigator.clipboard.writeText(body);
+        contactStatus.textContent = "Mensagem copiada. Cole-a na composição do Gmail, revise e envie.";
+    } catch (error) {
+        contactStatus.textContent = "Não foi possível copiar automaticamente. Copie os campos do formulário e cole-os na composição do Gmail.";
+        console.error("Não foi possível copiar a mensagem para a área de transferência.", error);
+    }
+
     window.location.assign(gmailComposeUrl.toString());
 });
