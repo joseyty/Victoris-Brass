@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#100804">
+    <meta name="description" content="Conheça as trilhas e melodias do universo Victoria Brass.">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="inicio.css">
+    <link rel="stylesheet" href="musicas.css">
+    <title>Músicas | Victoria Brass</title>
+</head>
+<body class="music-page">
+    <header id="inicio" class="site-header">
+        <a class="brand" href="inicio.html#inicio" aria-label="Victoria Brass - início">
+            <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true">
+                <path d="m27 6 3-3h4l3 3 5 1 4-1 3 3-1 4 3 4 4 1 1 4-2 4 1 5 3 3-1 4-4 2-2 5 1 4-3 3-4-1-5 3-1 4-4 1-3-3h-5l-3 3-4-1-1-4-5-3-4 1-3-3 1-4-3-4-4-2-1-4 3-3v-5l-3-4 1-4 4-1 3-4-1-4 3-3 4 1 5-2Z"/>
+                <circle cx="32" cy="32" r="13"/>
+                <circle cx="32" cy="32" r="5"/>
+            </svg>
+            <span class="brand__title">Victoria Brass</span>
+            <span class="brand__subtitle">STEAMPUNK</span>
+        </a>
+
+        <nav class="main-nav" aria-label="Navegação principal">
+            <a class="main-nav__link" href="inicio.html#inicio">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 11 9-8 9 8v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>
+                <span>Início</span>
+            </a>
+            <a class="main-nav__link" href="sobre.html">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0z"/></svg>
+                <span>Sobre</span>
+            </a>
+            <a class="main-nav__link" href="projeto.html">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5 14 4l2.5-.2 1 2.3 2.3 1-.2 2.5 1.5 2-1.5 2 .2 2.5-2.3 1-1 2.3-2.5-.2-2 1.5-2-1.5-2.5.2-1-2.3-2.3-1 .2-2.5L5 12l1.5-2-.2-2.5 2.3-1 1-2.3 2.4.3z"/><circle cx="12" cy="12" r="3"/></svg>
+                <span>Projetos</span>
+            </a>
+            <a class="main-nav__link is-active" href="musicas.html" aria-current="page">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+                <span>Músicas</span>
+            </a>
+            <a class="main-nav__link" href="galeria.html">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1"/><circle cx="8.5" cy="9" r="1.5"/><path d="m4 18 5-5 3 3 3-4 5 6"/></svg>
+                <span>Galeria</span>
+            </a>
+            <a class="main-nav__link" href="contato.html">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 5h20v14H2z"/><path d="m3 6 9 7 9-7"/></svg>
+                <span>Contato</span>
+            </a>
+        </nav>
+
+        <nav class="social-links" aria-label="Redes sociais">
+            <a href="https://discord.com/" target="_blank" rel="noopener noreferrer" aria-label="Discord">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.7 5.1a19 19 0 0 0-4.7-1.5l-.6 1.2a17.5 17.5 0 0 0-4.8 0L9 3.6a19 19 0 0 0-4.7 1.5C1.3 9.5.5 13.8.9 18a19 19 0 0 0 5.8 3l1.2-2a12 12 0 0 1-1.9-.9l.5-.4a13.6 13.6 0 0 0 11 0l.5.4a12 12 0 0 1-1.9.9l1.2 2a19 19 0 0 0 5.8-3c.5-4.9-.8-9.2-3.4-12.9ZM8.7 15.4c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2Zm6.6 0c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2Z"/></svg>
+            </a>
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.3 3.6-6.3 3.6Z"/></svg>
+            </a>
+            <a href="https://github.com/joseyty" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.56.1.76-.24.76-.54v-2.1c-3.1.67-3.76-1.32-3.76-1.32-.5-1.28-1.23-1.62-1.23-1.62-1.01-.69.08-.68.08-.68 1.12.08 1.71 1.15 1.71 1.15 1 1.71 2.62 1.22 3.26.93.1-.72.39-1.22.71-1.5-2.48-.28-5.09-.24-5.09-5.53 0-1.22.44-2.21 1.15-2.99-.12-.28-.5-1.42.11-2.95 0 0 .94-.3 3.05 1.14a10.6 10.6 0 0 1 5.55 0c2.11-1.44 3.04-1.14 3.04-1.14.61 1.53.23 2.67.11 2.95.72.78.71 1.15.11 2.99 0 4.3-2.61 5.25-5.1 5.52.4.35.76 1.03.76 2.08v3.07c0 .3.2.65.77.54A11.1 11.1 0 0 0 12 .9Z"/></svg>
+            </a>
+        </nav>
+    </header>
+
+    <main class="music-main" aria-labelledby="music-title">
+        <section class="music-intro">
+            <div class="music-intro__record" aria-hidden="true">
+                <svg viewBox="0 0 240 240">
+                    <circle class="record-groove" cx="120" cy="120" r="108"/>
+                    <circle class="record-groove" cx="120" cy="120" r="91"/>
+                    <circle class="record-groove" cx="120" cy="120" r="74"/>
+                    <circle class="record-label" cx="120" cy="120" r="48"/>
+                    <path d="m120 83 7 22 22-7-13 19 13 19-22-7-7 22-7-22-22 7 13-19-13-19 22 7Z"/>
+                    <circle cx="120" cy="120" r="5"/>
+                </svg>
+            </div>
+            <div class="music-intro__copy">
+                <div class="music-ornament" aria-hidden="true"><span></span><svg viewBox="0 0 64 64"><path d="m27 6 3-3h4l3 3 5 1 4-1 3 3-1 4 3 4 4 1 1 4-2 4 1 5 3 3-1 4-4 2-2 5 1 4-3 3-4-1-5 3-1 4-4 1-3-3h-5l-3 3-4-1-1-4-5-3-4 1-3-3 1-4-3-4-4-2-1-4 3-3v-5l-3-4 1-4 4-1 3-4-1-4 3-3 4 1 5-2Z"/><circle cx="32" cy="32" r="13"/><circle cx="32" cy="32" r="5"/></svg><span></span></div>
+                <p class="music-eyebrow">Uma trilha para cada aventura</p>
+                <h1 id="music-title">Músicas</h1>
+                <p class="music-lead">Melodias de latão, vapor e imaginação compõem o som do universo Victoria Brass.</p>
+                <p class="music-note">A coleção terá espaço para 15 faixas. As capas e os áudios poderão ser adicionados quando estiverem prontos.</p>
+            </div>
+        </section>
+
+        <section class="music-collection" aria-labelledby="collection-title">
+            <div class="music-section-heading">
+                <span></span>
+                <h2 id="collection-title">Coleção musical</h2>
+                <span></span>
+            </div>
+            <div class="music-grid">
+                <article class="music-card">
+                    <div class="music-card__art" aria-hidden="true"><img src="img/Capa a dama das engrenagens.png" alt=""></div>
+                    <div class="music-card__body"><span class="music-card__number">01</span><div><h3>Dama das engrenagens</h3><p>Uma aventura entre engrenagens, vapor e o legado de Victoria Brass.</p></div><span class="music-card__status">Em preparação</span></div>
+                </article>
+                <article class="music-card">
+                    <div class="music-card__art" aria-hidden="true"><img src="img/Capa o Baile das Mascaras de Ferro.png" alt=""></div>
+                    <div class="music-card__body"><span class="music-card__number">02</span><div><h3>Baile das máscaras de ferro</h3><p>Uma noite de máscaras, mistérios e encontros à luz das engrenagens.</p></div><span class="music-card__status">Em preparação</span></div>
+                </article>
+                <article class="music-card">
+                    <div class="music-card__art" aria-hidden="true"><img src="img/Capa a cidade nunca dorme.png" alt=""></div>
+                    <div class="music-card__body"><span class="music-card__number">03</span><div><h3>Cidade nunca dorme</h3><p>Uma cidade em movimento, iluminada por vapor e aventuras noturnas.</p></div><span class="music-card__status">Em preparação</span></div>
+                </article>
+                <article class="music-card">
+                    <div class="music-card__art" aria-hidden="true"><svg viewBox="0 0 100 100"><path d="M42 67V27l38-8v40M42 37l38-8"/><ellipse cx="30" cy="69" rx="13" ry="9"/><ellipse cx="68" cy="61" rx="13" ry="9"/><path d="M30 60v9m38-17v9"/></svg></div>
+                    <div class="music-card__body"><span class="music-card__number">04</span><div><h3>O Baile das Engrenagens</h3><p>Uma valsa elegante entre inventores e máquinas de corda.</p></div><span class="music-card__status">Em preparação</span></div>
+                </article>
+                <article class="music-card">
+                    <div class="music-card__art" aria-hidden="true"><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="34"/><circle cx="50" cy="50" r="27"/><circle cx="50" cy="50" r="5"/><path d="M50 16v9m0 50v9M16 50h9m50 0h9M26 26l7 7m34 34 7 7m0-48-7 7M33 67l-7 7M50 34v16l13 8"/></svg></div>
+                    <div class="music-card__body"><span class="music-card__number">05</span><div><h3>Relógio de Bolso</h3><p>Uma melodia marcada pelo compasso preciso de um antigo relógio.</p></div><span class="music-card__status">Em preparação</span></div>
+                </article>
+                <article class="music-card">
+                    <div class="music-card__art" aria-hidden="true"><svg viewBox="0 0 100 100"><path d="M17 53c15-20 48-28 68-14-6 18-31 34-56 34-9 0-14-6-12-20Z"/><path d="m25 56 39-12m-34 20 39-13M46 35l12 35m4-39 11 31M26 55l-8-10m54 23 11 8"/><circle cx="62" cy="43" r="5"/></svg></div>
+                    <div class="music-card__body"><span class="music-card__number">06</span><div><h3>Segredos de Latão</h3><p>Uma aventura sonora por corredores cheios de mecanismos ocultos.</p></div><span class="music-card__status">Em preparação</span></div>
+                </article>
+                <article class="music-card">
+                    <div class="music-card__art" aria-hidden="true"><svg viewBox="0 0 100 100"><path d="M50 14c-19 0-34 15-34 34s15 34 34 34 34-15 34-34S69 14 50 14Z"/><path d="M23 61c9-8 17-8 27 0s18 8 27 0M22 48h56M36 19c-6 12-6 38 0 58m28-58c6 12 6 38 0 58M50 16v64"/><circle cx="50" cy="50" r="7"/></svg></div>
+                    <div class="music-card__body"><span class="music-card__number">07</span><div><h3>Marés de Bronze</h3><p>Ondas distantes e motores submersos embalam esta expedição.</p></div><span class="music-card__status">Em preparação</span></div>
+                </article>
+                <article class="music-card">
+                    <div class="music-card__art" aria-hidden="true"><svg viewBox="0 0 100 100"><path d="M50 13v49m0 0c0 11-9 19-20 19-8 0-13-5-13-12s5-12 13-12c9 0 15 7 15 15m5-59 24-5v47c0 11-9 19-20 19-8 0-13-5-13-12s5-12 13-12c8 0 14 6 15 13"/><path d="M50 25 74 20"/></svg></div>
+                    <div class="music-card__body"><span class="music-card__number">08</span><div><h3>Canção da Inventora</h3><p>Uma melodia tranquila para acompanhar novas ideias e descobertas.</p></div><span class="music-card__status">Em preparação</span></div>
+                </article>
+                <article class="music-card">
+                    <div class="music-card__art" aria-hidden="true"><svg viewBox="0 0 100 100"><path d="M50 15v55M50 15l13-8m-13 8-13-8M50 28l-18 17m18-17 18 17M50 42 23 61m27-19 27 19M50 55l-22 26m22-26 22 26M27 81h46"/><circle cx="50" cy="15" r="4"/><circle cx="32" cy="45" r="4"/><circle cx="68" cy="45" r="4"/><circle cx="23" cy="61" r="4"/><circle cx="77" cy="61" r="4"/></svg></div>
+                    <div class="music-card__body"><span class="music-card__number">09</span><div><h3>Faíscas Voltaicas</h3><p>Ritmos elétricos inspirados nos experimentos do laboratório.</p></div><span class="music-card__status">Em preparação</span></div>
+                </article>
+                <article class="music-card">
+                    <div class="music-card__art" aria-hidden="true"><svg viewBox="0 0 100 100"><path d="M18 72h64V47H18zM29 47V29h32v18m-23-18V19h14v10m19 28h10m-64 19h64"/><circle cx="34" cy="63" r="5"/><circle cx="50" cy="63" r="5"/><circle cx="66" cy="63" r="5"/><path d="M33 39h24m-12-6v12"/></svg></div>
+                    <div class="music-card__body"><span class="music-card__number">10</span><div><h3>Trilhos da Meia-noite</h3><p>O som de uma locomotiva cruzando a cidade sob o céu noturno.</p></div><span class="music-card__status">Em preparação</span></div>
+                </article>
+                <article class="music-card">
+                    <div class="music-card__art" aria-hidden="true"><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="32"/><circle cx="50" cy="50" r="23"/><circle cx="50" cy="50" r="14"/><circle cx="50" cy="50" r="5"/><path d="M50 18v12m0 40v12M18 50h12m40 0h12M28 28l9 9m26 26 9 9m0-44-9 9M37 63l-9 9"/></svg></div>
+                    <div class="music-card__body"><span class="music-card__number">11</span><div><h3>O Observatório de Nora</h3><p>Uma composição contemplativa sob estrelas e constelações distantes.</p></div><span class="music-card__status">Em preparação</span></div>
+                </article>
+                <article class="music-card">
+                    <div class="music-card__art" aria-hidden="true"><svg viewBox="0 0 100 100"><path d="M50 14c-20 0-36 16-36 36s16 36 36 36 36-16 36-36S70 14 50 14Z"/><path d="M50 21v29l20 12"/><path d="m63 22 7-7m-40 0 7 7M19 48h10m42 0h10M27 73l8-8m30 0 8 8"/><circle cx="50" cy="50" r="4"/></svg></div>
+                    <div class="music-card__body"><span class="music-card__number">12</span><div><h3>O Último Trem</h3><p>Uma despedida melancólica na plataforma de uma estação a vapor.</p></div><span class="music-card__status">Em preparação</span></div>
+                </article>
+                <article class="music-card">
+                    <div class="music-card__art" aria-hidden="true"><svg viewBox="0 0 100 100"><path d="M25 67c11-12 39-12 50 0v12H25zM31 67V43h38v24M38 43V31h24v12m-17-12V22h10v9"/><path d="M36 57h28m-21-5v11m14-11v11"/><circle cx="50" cy="51" r="4"/></svg></div>
+                    <div class="music-card__body"><span class="music-card__number">13</span><div><h3>Fornalha Acesa</h3><p>Calor, martelos e trabalho em uma oficina que nunca dorme.</p></div><span class="music-card__status">Em preparação</span></div>
+                </article>
+                <article class="music-card">
+                    <div class="music-card__art" aria-hidden="true"><svg viewBox="0 0 100 100"><path d="M16 63c0-20 14-35 34-35s34 15 34 35M10 63h80M21 63v13m58-13v13M28 76h44M39 46c7-8 15-8 22 0m-25 9c10-9 20-9 29 0"/><circle cx="50" cy="28" r="5"/></svg></div>
+                    <div class="music-card__body"><span class="music-card__number">14</span><div><h3>Balada do Aeronauta</h3><p>Uma canção de viagem para quem sempre escolhe o próximo horizonte.</p></div><span class="music-card__status">Em preparação</span></div>
+                </article>
+                <article class="music-card">
+                    <div class="music-card__art" aria-hidden="true"><svg viewBox="0 0 100 100"><path d="M50 15v18m0 0c-18 0-29 12-29 28v13h58V61c0-16-11-28-29-28Z"/><path d="M32 54h36m-36 11h36m-25-32V21m14 12V21M14 83h72"/><circle cx="50" cy="46" r="5"/><circle cx="37" cy="70" r="3"/><circle cx="63" cy="70" r="3"/></svg></div>
+                    <div class="music-card__body"><span class="music-card__number">15</span><div><h3>Victoria Brass: Tema Principal</h3><p>O tema que reúne invenções, encontros e aventuras em uma só melodia.</p></div><span class="music-card__status">Em preparação</span></div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p class="site-footer__copyright">Victoria Brass © 2026 <span aria-hidden="true">|</span> Todos os direitos reservados.</p>
+        <div class="site-footer__ornament" aria-hidden="true">
+            <span></span>
+            <svg viewBox="0 0 64 64"><path d="m27 6 3-3h4l3 3 5 1 4-1 3 3-1 4 3 4 4 1 1 4-2 4 1 5 3 3-1 4-4 2-2 5 1 4-3 3-4-1-5 3-1 4-4 1-3-3h-5l-3 3-4-1-1-4-5-3-4 1-3-3 1-4-3-4-4-2-1-4 3-3v-5l-3-4 1-4 4-1 3-4-1-4 3-3 4 1 5-2Z"/><circle cx="32" cy="32" r="13"/><circle cx="32" cy="32" r="5"/></svg>
+            <span></span>
+        </div>
+        <div class="site-footer__social">
+            <span class="site-footer__social-label">Siga nas redes:</span>
+            <nav class="site-footer__links" aria-label="Redes sociais no rodapé">
+                <a href="https://discord.com/" target="_blank" rel="noopener noreferrer" aria-label="Discord"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.7 5.1a19 19 0 0 0-4.7-1.5l-.6 1.2a17.5 17.5 0 0 0-4.8 0L9 3.6a19 19 0 0 0-4.7 1.5C1.3 9.5.5 13.8.9 18a19 19 0 0 0 5.8 3l1.2-2a12 12 0 0 1-1.9-.9l.5-.4a13.6 13.6 0 0 0 11 0l.5.4a12 12 0 0 1-1.9.9l1.2 2a19 19 0 0 0 5.8-3c.5-4.9-.8-9.2-3.4-12.9ZM8.7 15.4c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2Zm6.6 0c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2Z"/></svg></a>
+                <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.3 3.6-6.3 3.6Z"/></svg></a>
+                <a href="https://github.com/joseyty" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.56.1.76-.24.76-.54v-2.1c-3.1.67-3.76-1.32-3.76-1.32-.5-1.28-1.23-1.62-1.23-1.62-1.01-.69.08-.68.08-.68 1.12.08 1.71 1.15 1.71 1.15 1 1.71 2.62 1.22 3.26.93.1-.72.39-1.22.71-1.5-2.48-.28-5.09-.24-5.09-5.53 0-1.22.44-2.21 1.15-2.99-.12-.28-.5-1.42.11-2.95 0 0 .94-.3 3.05 1.14a10.6 10.6 0 0 1 5.55 0c2.11-1.44 3.04-1.14 3.04-1.14.61 1.53.23 2.67.11 2.95.72.78.71 1.15.11 2.99 0 4.3-2.61 5.25-5.1 5.52.4.35.76 1.03.76 2.08v3.07c0 .3.2.65.77.54A11.1 11.1 0 0 0 12 .9Z"/></svg></a>
+            </nav>
+        </div>
+    </footer>
+    <script src="musicas.js" defer></script>
+</body>
+</html>

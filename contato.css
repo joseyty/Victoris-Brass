@@ -1,0 +1,457 @@
+body.contact-page{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.contact-main{
+    display: grid;
+    width: min(1540px, calc(100% - 56px));
+    flex: 1;
+    grid-template-columns: minmax(230px, 0.78fr) minmax(390px, 1.2fr) minmax(260px, 0.88fr);
+    align-items: center;
+    gap: clamp(18px, 2.2vw, 34px);
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 26px 0;
+    animation: site-page-in 380ms ease-out both;
+}
+
+.contact-profile,
+.contact-form-panel,
+.contact-details{
+    min-width: 0;
+}
+
+.contact-profile{
+    position: relative;
+    display: flex;
+    min-height: 560px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 28px 22px;
+    border: 1px solid #a9652a;
+    background:
+        linear-gradient(180deg, rgba(16, 8, 4, 0.38), rgba(13, 6, 3, 0.96)),
+        url("img/backgroundpunk.png") center / cover;
+    box-shadow: 0 0 0 4px rgba(9, 5, 3, 0.76), 0 0 22px rgba(0, 0, 0, 0.56);
+    color: #e8c99e;
+    text-align: center;
+}
+
+.contact-profile::before{
+    position: absolute;
+    inset: 6px;
+    border: 1px solid rgba(220, 153, 77, 0.5);
+    content: "";
+    pointer-events: none;
+}
+
+.contact-profile__portrait{
+    position: relative;
+    width: min(100%, 260px);
+    aspect-ratio: 1;
+    margin-bottom: 22px;
+    overflow: hidden;
+    border: 1px solid rgba(215, 148, 69, 0.8);
+    border-radius: 50%;
+    box-shadow: 0 0 0 8px rgba(21, 10, 5, 0.72), 0 0 0 9px rgba(201, 132, 59, 0.52), 0 0 28px rgba(221, 143, 59, 0.2);
+}
+
+.contact-profile__portrait img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 28%;
+}
+
+.contact-profile h2{
+    margin: 0;
+    color: #f0bf7a;
+    font: 400 clamp(26px, 2.5vw, 36px) Georgia, "Times New Roman", serif;
+    text-shadow: 0 2px 6px #160903;
+}
+
+.contact-profile__role{
+    margin: 7px 0 18px;
+    color: #e5b878;
+    font: 13px Georgia, "Times New Roman", serif;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.contact-profile__bio{
+    max-width: 34ch;
+    margin: 0;
+    font: 16px/1.6 Georgia, "Times New Roman", serif;
+}
+
+.contact-profile__location{
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    margin-top: 22px;
+    color: #e9b468;
+    font: 14px Georgia, "Times New Roman", serif;
+}
+
+.contact-profile__location svg{
+    width: 18px;
+    height: 18px;
+    fill: none;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.8;
+}
+
+.contact-form-panel{
+    padding: clamp(20px, 2.5vw, 38px);
+    border: 1px solid rgba(169, 101, 42, 0.8);
+    background: linear-gradient(110deg, rgba(15, 7, 4, 0.94), rgba(25, 12, 6, 0.9));
+    box-shadow: 0 0 0 4px rgba(11, 6, 3, 0.68), inset 0 0 24px rgba(192, 116, 46, 0.08);
+}
+
+.contact-heading{
+    color: #f3d09d;
+    text-align: center;
+    text-shadow: 0 2px 6px #160903;
+}
+
+.contact-heading__ornament{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #e6a14e;
+}
+
+.contact-heading__ornament span{
+    height: 1px;
+    flex: 1;
+    background: linear-gradient(90deg, transparent, #ce863d);
+}
+
+.contact-heading__ornament span:last-child{
+    transform: scaleX(-1);
+}
+
+.contact-heading__ornament svg{
+    width: 36px;
+    height: 36px;
+    flex: 0 0 auto;
+    fill: rgba(26, 12, 6, 0.8);
+    stroke: currentColor;
+    stroke-width: 2;
+    filter: drop-shadow(0 0 5px rgba(223, 145, 63, 0.45));
+}
+
+.contact-eyebrow{
+    margin: 8px 0 4px;
+    color: #e5b878;
+    font: 11px Georgia, "Times New Roman", serif;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.contact-heading h1{
+    margin: 0;
+    color: #f0bf7a;
+    font: 400 clamp(30px, 3vw, 46px)/1.08 Georgia, "Times New Roman", serif;
+    text-transform: uppercase;
+    text-shadow: 0 3px 4px #160903, 0 0 18px rgba(231, 154, 68, 0.22);
+}
+
+.contact-intro{
+    margin: 10px 0 22px;
+    color: #e8c99e;
+    font: italic clamp(15px, 1.35vw, 18px)/1.45 Georgia, "Times New Roman", serif;
+}
+
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.contact-form label{
+    margin-top: 5px;
+    color: #e7b874;
+    font: 13px Georgia, "Times New Roman", serif;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px 15px;
+    border: 1px solid rgba(201, 132, 59, 0.75);
+    border-radius: 0;
+    color: #f2dfc4;
+    background:
+        linear-gradient(135deg, rgba(67, 33, 14, 0.3), transparent 55%),
+        rgba(10, 5, 3, 0.9);
+    box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.48);
+    font: 15px Georgia, "Times New Roman", serif;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder{
+    color: rgba(224, 193, 157, 0.62);
+}
+
+.contact-form textarea{
+    min-height: 132px;
+    resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+    outline: 2px solid rgba(230, 161, 78, 0.72);
+    outline-offset: 2px;
+}
+
+.contact-form button{
+    align-self: center;
+    display: inline-flex;
+    min-width: 210px;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 9px;
+    padding: 11px 22px;
+    border: 1px solid #d39245;
+    color: #ffdfa9;
+    background: linear-gradient(135deg, #5d3216, #271309 70%);
+    box-shadow: inset 0 0 0 3px rgba(211, 146, 69, 0.12), 0 0 13px rgba(211, 146, 69, 0.13);
+    cursor: pointer;
+    font: 16px Georgia, "Times New Roman", serif;
+    transition: border-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
+}
+
+.contact-form button span{
+    color: #e7a24e;
+    font-size: 23px;
+    line-height: 14px;
+}
+
+.contact-form button:hover{
+    transform: translateY(-1px);
+    border-color: #f0bf7a;
+    box-shadow: inset 0 0 0 3px rgba(211, 146, 69, 0.18), 0 0 18px rgba(211, 146, 69, 0.25);
+}
+
+.contact-form button:focus-visible,
+.contact-detail:focus-visible{
+    outline: 2px solid #f0bf7a;
+    outline-offset: 4px;
+}
+
+.contact-form__status{
+    min-height: 2.6em;
+    margin: 3px 0 0;
+    color: #cbb18e;
+    font: 12px/1.4 Georgia, "Times New Roman", serif;
+    text-align: center;
+}
+
+.contact-details{
+    padding: clamp(18px, 2vw, 28px);
+    border: 1px solid rgba(169, 101, 42, 0.62);
+    background: linear-gradient(110deg, rgba(15, 7, 4, 0.9), rgba(25, 12, 6, 0.82));
+    box-shadow: inset 0 0 18px rgba(192, 116, 46, 0.08), 0 0 0 3px rgba(11, 6, 3, 0.4);
+    color: #e8c99e;
+}
+
+.contact-details h2{
+    margin: 0 0 7px;
+    color: #f0bf7a;
+    font: 400 clamp(25px, 2.3vw, 34px) Georgia, "Times New Roman", serif;
+}
+
+.contact-details__intro{
+    margin: 0 0 24px;
+    font: 15px/1.55 Georgia, "Times New Roman", serif;
+}
+
+.contact-detail{
+    display: grid;
+    grid-template-columns: 42px minmax(0, 1fr) 18px;
+    align-items: center;
+    gap: 12px;
+    margin-top: 15px;
+    padding: 13px 10px;
+    border-bottom: 1px solid rgba(201, 132, 59, 0.38);
+    color: inherit;
+    text-decoration: none;
+    transition: background-color 0.18s ease, border-color 0.18s ease;
+}
+
+.contact-detail:hover{
+    border-color: rgba(230, 161, 78, 0.9);
+    background: rgba(41, 20, 9, 0.55);
+}
+
+.contact-detail__icon{
+    display: grid;
+    width: 40px;
+    height: 40px;
+    place-items: center;
+    color: #e6a14e;
+    border: 1px solid rgba(201, 132, 59, 0.55);
+    background: rgba(18, 8, 4, 0.82);
+}
+
+.contact-detail__icon svg{
+    width: 21px;
+    height: 21px;
+    fill: currentColor;
+}
+
+.contact-detail:nth-of-type(3) .contact-detail__icon svg{
+    fill: none;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.5;
+}
+
+.contact-detail strong,
+.contact-detail small{
+    display: block;
+    overflow-wrap: anywhere;
+}
+
+.contact-detail strong{
+    color: #f0bf7a;
+    font: 20px Georgia, "Times New Roman", serif;
+}
+
+.contact-detail small{
+    margin-top: 3px;
+    color: #dfc5a2;
+    font: 13px Georgia, "Times New Roman", serif;
+}
+
+.contact-detail__arrow{
+    color: #d8964b;
+    font-size: 18px;
+}
+
+.contact-page .site-footer{
+    position: relative;
+    right: auto;
+    bottom: auto;
+    left: auto;
+}
+
+@media (max-width: 1080px){
+    .contact-main{
+        grid-template-columns: minmax(220px, 0.8fr) minmax(340px, 1.2fr);
+        width: min(900px, calc(100% - 40px));
+    }
+
+    .contact-profile{
+        min-height: 520px;
+    }
+
+    .contact-details{
+        display: grid;
+        grid-column: 1 / -1;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        align-items: start;
+        gap: 10px 18px;
+    }
+
+    .contact-details h2,
+    .contact-details__intro{
+        grid-column: 1 / -1;
+        margin-bottom: 0;
+    }
+
+    .contact-detail{
+        grid-template-columns: 36px minmax(0, 1fr);
+        gap: 9px;
+        margin-top: 4px;
+        padding: 10px 4px;
+    }
+
+    .contact-detail__icon{
+        width: 34px;
+        height: 34px;
+    }
+
+    .contact-detail__arrow{
+        display: none;
+    }
+}
+
+@media (max-width: 680px){
+    .contact-main{
+        width: min(540px, calc(100% - 30px));
+        grid-template-columns: minmax(0, 1fr);
+        gap: 24px;
+        padding: 22px 0;
+    }
+
+    .contact-profile{
+        min-height: 0;
+        padding: 28px 22px;
+    }
+
+    .contact-profile__portrait{
+        width: min(58vw, 220px);
+        margin-bottom: 19px;
+    }
+
+    .contact-profile__bio{
+        font-size: 15px;
+    }
+
+    .contact-form-panel{
+        padding: 22px 18px;
+    }
+
+    .contact-heading h1{
+        font-size: clamp(27px, 8vw, 40px);
+    }
+
+    .contact-details{
+        display: block;
+        padding: 20px 16px;
+    }
+
+    .contact-details h2{
+        font-size: 28px;
+    }
+
+    .contact-detail{
+        grid-template-columns: 42px minmax(0, 1fr) 18px;
+        gap: 12px;
+        margin-top: 10px;
+        padding: 12px 8px;
+    }
+
+    .contact-detail__icon{
+        width: 40px;
+        height: 40px;
+    }
+
+    .contact-detail__arrow{
+        display: inline;
+    }
+}
+
+@media (prefers-reduced-motion: reduce){
+    .contact-main,
+    .contact-form button,
+    .contact-detail{
+        animation: none;
+        transition: none;
+    }
+}
